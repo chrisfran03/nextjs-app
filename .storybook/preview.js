@@ -43,6 +43,7 @@ export const parameters = {
     },
   },
   viewport: { viewports: customViewports },
+  layout: 'fullscreen',
   nextRouter: {
     Provider: RouterContext.Provider,
   },
