@@ -4,7 +4,6 @@ import { useState } from 'react';
 export interface ISearch {}
 
 const Search: React.FC<ISearch> = () => {
-  // 1
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState<string>('');
 
@@ -13,7 +12,6 @@ const Search: React.FC<ISearch> = () => {
       className="flex flex-col items-center gap-y-5"
       onSubmit={(e) => {
         e.preventDefault();
-        // 2
         router.push(`/results?search=${searchTerm}`);
       }}
     >

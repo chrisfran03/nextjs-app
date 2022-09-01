@@ -21,7 +21,7 @@ const Home: NextPageWithLayout = () => {
       <p>
         Google offered in:{' '}
         <Link href="/" locale={locale === 'en' ? 'fr' : 'en'}>
-          <a className="underline text-blue-600"> Maori</a>
+          <a className="underline text-blue-600"> Français</a>
         </Link>
       </p>
     </section>

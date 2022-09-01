@@ -1,5 +1,5 @@
 export interface ISearchData {
-    url: string;
-    title: string;
-    text: string;
-  }
+  url: string;
+  title: string;
+  text: string;
+}

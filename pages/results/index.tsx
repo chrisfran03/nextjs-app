@@ -13,11 +13,9 @@ export const getServerSideProps: GetServerSideProps<IResults> = async ({
   query,
 }) => {
   let searchResults: IApiSearchResponseData = [];
-  // 1
   const searchTerm = query.search;
 
   if (searchTerm && searchTerm.length > 0) {
-    // 2
     const response = await fetch(`http://localhost:3000/api/search`, {
       body: JSON.stringify({ searchTerm }),
       headers: {
@@ -30,7 +28,6 @@ export const getServerSideProps: GetServerSideProps<IResults> = async ({
   }
 
   return {
-    // 3
     props: {
       // Will be passed to the page component as props
       searchResults,
@@ -47,7 +44,6 @@ const Results: NextPageWithLayout<IResults> = ({ searchResults }) => {
         {hasResults ? (
           <div className={`flex flex-col space-y-8`}>
             {searchResults.map((result, idx) => {
-              // 4
               return <SearchResult key={idx} {...result} />;
             })}
           </div>
